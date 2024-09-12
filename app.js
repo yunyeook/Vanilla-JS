@@ -1,19 +1,21 @@
-const h1 = document.querySelector('div h1');
-function handleH1Click() {
-  const clickedClass = 'active'; //수정하기 편하므로 변수로 사용하기!!
-  // if (h1.className === clickedClass) {
-  //   h1.className = '';
-  // } else {
-  //   h1.className = clickedClass;
-  // }
+/*
+<div>
+  <input />
+  <button> </button>
+ </div > 
+ */
+const loginForm = document.querySelector('#login-form'); //div태그 요소를 저장
+const loginInput = loginForm.querySelector('input'); //div 태그 안에있는 요소를 찾는거라 document안써도 됨.!!
 
-  // if (h1.classList.contains(clickedClass)) {
-  //   h1.classList.remove(clickedClass);
-  // } else {
-  //   h1.classList.add(clickedClass);
-  // }
-  //=> 한줄로 바꿀수 있음.
-  h1.classList.toggle('active');
+function onLoginSubmit(event) {
+  event.preventDefault();
+  console.log(event);
 }
+loginForm.addEventListener('submit', onLoginSubmit);
 
-h1.addEventListener('click', handleH1Click);
+// function clickCheckbox(event) {
+//   event.preventDefault();
+//   console.log(event);
+// }
+
+// loginForm.addEventListener('click', clickCheckbox);
