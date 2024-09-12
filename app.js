@@ -1,41 +1,19 @@
-const h1 = document.querySelector('.hello');
+const h1 = document.querySelector('div h1');
 function handleH1Click() {
-  const currentColor = h1.style.color;
-  let newColor;
-  if (currentColor === 'blue') {
-    newColor = 'green';
-  } else {
-    newColor = 'blue';
-  }
-  h1.style.color = newColor;
-}
+  const clickedClass = 'active'; //수정하기 편하므로 변수로 사용하기!!
+  // if (h1.className === clickedClass) {
+  //   h1.className = '';
+  // } else {
+  //   h1.className = clickedClass;
+  // }
 
-function handleMouseEnter() {
-  // console.log('mouse is here');
-  h1.style.color = 'red';
-  h1.innerText = 'mouse is here!';
+  // if (h1.classList.contains(clickedClass)) {
+  //   h1.classList.remove(clickedClass);
+  // } else {
+  //   h1.classList.add(clickedClass);
+  // }
+  //=> 한줄로 바꿀수 있음.
+  h1.classList.toggle('active');
 }
-function handleMouseLeave() {
-  h1.style.color = 'black';
-  h1.innerText = 'mouse is gone~';
-}
-// title.addEventListener('click', handleH1Click()); => 작동안함 why? 콜백함수에서 ()를 빼야함!!
 
 h1.addEventListener('click', handleH1Click);
-h1.addEventListener('mouseenter', handleMouseEnter); //해당요소에 마우스 올라갔을때
-// title.addEventListener('mouseleave', handleMouseLeave);
-
-h1.onmouseleave = handleMouseLeave; // 별로 선호 하지 않음
-
-function handleWindowResize() {
-  document.body.style.backgroundColor = 'skyblue';
-}
-function handleWindowCopy() {
-  alert('no copy');
-}
-function handleWindowoffline() {
-  alert('no wifi');
-}
-window.addEventListener('resize', handleWindowResize);
-window.addEventListener('copy', handleWindowCopy);
-window.addEventListener('offline', handleWindowoffline);
