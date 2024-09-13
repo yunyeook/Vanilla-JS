@@ -1,9 +1,17 @@
-const link = document.querySelector('a');
-function clickLink(event) {
-  //alert는 모든 동작을 일단 멈춘다!! ok누르면 원래 동작 진행함.
+const loginForm = document.querySelector('#login-form');
+const loginInput = loginForm.querySelector('input');
+const greeting = document.querySelector('#greeting');
 
-  console.log(event);
+const HIDDEN_CLASSNAME = 'hidden';
+//string만 포함된 변수명은 대문자로만 표기한다.!!
+function onLoginSubmit(event) {
+  const username = loginInput.value;
+  //기존의 폼 없애기
   event.preventDefault();
-  alert('click');
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  //환영인사하기
+  greeting.innerText = `Hello ${username} ~`;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
 }
-link.addEventListener('click', clickLink);
+
+loginForm.addEventListener('submit', onLoginSubmit);

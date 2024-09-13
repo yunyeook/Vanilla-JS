@@ -1,12 +1,3 @@
-body {
-  background-color: rgb(255, 234, 214);
-}
-
-h1 {
-  color: pink;
-  transition: color 0.5s ease-out;
-}
-
-.active {
-  color: blue;
+.hidden {
+  display: none;
 }
