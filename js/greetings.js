@@ -20,5 +20,5 @@ if (localStorage.getItem(USERNAME) === null) {
   loginForm.addEventListener('submit', onLoginSubmit);
 } else {
   greeting.classList.remove(HIDDEN);
-  greeting.innerText = `Hello ${localStorage.getItem(USERNAME)} ~`;
+  greeting.innerText = `~ Hello ${localStorage.getItem(USERNAME)} ~`;
 }

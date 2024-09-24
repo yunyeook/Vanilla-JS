@@ -9,5 +9,5 @@ function getClock() {
   clock.innerText = `${hours} : ${minutes} : ${seconds}`;
 }
 getClock(); //처음에 웹사이트 열자마자 시간 떠야하니까 맨처음엔 함수 실행하기
-setInterval(getClock, 1000); //1초마다 갱신하도록 함수 실행하기
 
+setInterval(getClock, 1000); //1초마다 갱신하도록 함수 실행하기

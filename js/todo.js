@@ -19,16 +19,29 @@ function deleteToDo(event) {
 function paintToDo(newToDoObject) {
   const li = document.createElement('li');
   li.id = newToDoObject.id;
+
+  //할일 내용
   const span = document.createElement('span');
   span.innerText = newToDoObject.text;
 
+  //할일 지우기 버튼
   const button = document.createElement('button');
   button.innerText = '❌';
   button.addEventListener('click', deleteToDo);
 
+  //할일 완료했을 때!
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  checkbox.addEventListener('click', checkboxClick);
+
+  li.appendChild(checkbox);
   li.appendChild(span);
   li.appendChild(button);
   toDoList.appendChild(li);
+}
+function checkboxClick(event) {
+  console.log(event);
+  event.target.parentElement.children[1].classList.toggle('line-through');
 }
 
 function toDoSubmit(event) {

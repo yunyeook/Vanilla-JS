@@ -1,3 +1,86 @@
 .hidden {
   display: none;
 }
+
+body {
+  color: white;
+  background-size: 100vw 100vh;
+  /* filter: brightness(10%); */
+}
+
+#clock {
+  text-align: center;
+  position: fixed;
+  top: 35%;
+  right: 10%;
+  left: 10%;
+  font-size: 50px;
+}
+#greeting {
+  text-align: center;
+  position: fixed;
+  top: 44%;
+  right: 10%;
+  left: 10%;
+  font-family: 'Courier New', Courier, monospace;
+}
+form input {
+  text-align: center;
+  position: absolute;
+  top: 52%;
+  right: 30%;
+  left: 30%;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-color: white;
+  background-color: transparent;
+  /* background-color: white; */
+  color: white;
+  outline: none;
+}
+input::placeholder {
+  color: white;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+
+#weather {
+  position: absolute;
+  top: 1vh;
+  right: 2vw;
+}
+
+#quote span:first-child {
+  text-align: center;
+  display: block;
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  right: 10%;
+  font-family: Courier, monospace;
+}
+#quote span:last-child {
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  bottom: 18%;
+  left: 10%;
+  right: 10%;
+  font-family: Courier, monospace;
+}
+img {
+  filter: brightness(10%);
+}
+button {
+  background-color: transparent;
+  border-width: 0;
+}
+#todolist li {
+  list-style: none;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
